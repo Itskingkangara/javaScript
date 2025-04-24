@@ -19,5 +19,12 @@ d.email="You are Hacked"
 
 console.log(c, d)//due to stack memory which introduce pass by refrence both values get changed by changing one value
 
+let e=d; 
+
+e.email= " another time you are hacked "
+
+console.log(e); 
+console.log(c); 
+
 
 

@@ -8,3 +8,5 @@ let obj={
 }
 
 console.log(obj)
+
+console.log(arr[3]+ obj.rollNo) //this is how to acess objects 

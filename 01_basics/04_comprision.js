@@ -10,7 +10,7 @@ console.log(4===4) //give true answer
 
 //symbol basics 
 
-const id=Symbol('123')
+const id1=Symbol('123')
 const id2=Symbol('123')
 
-console.log(id===id2)
+console.log(id1===id2)
