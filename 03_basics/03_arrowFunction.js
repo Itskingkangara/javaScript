@@ -53,3 +53,10 @@ let add3 = (num1, num2) =>
     (num1+ num2)  //by using (), you don't need to use Return keyword
 
 console.log(`${add1(2,1)}--num1 , ${add2(3,2)}---num2, ${add3(4,3)}---num3`)
+
+
+let mul = (num1, num2)=>{
+    return num1*num2
+}
+
+console.log(mul(2,4))

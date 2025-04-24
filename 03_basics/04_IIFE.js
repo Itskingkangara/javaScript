@@ -28,3 +28,9 @@
     //named IIFE 
     console.log(`${name} writing this code`)
 }) ('Harshit');
+
+
+//lets try IIFE
+(function callItself(name){
+    console.log(` its a iife : imediatelly invoked function expression created by ` )
+})(" harshit ");

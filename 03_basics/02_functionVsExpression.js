@@ -22,13 +22,15 @@ let temp=addThree(5)//calling before declaring
 console.log(temp)
 
 function addThree(num){
-    return num+3
+    return num+3        //normal funtion declaration is allowed if function gets call before declaration 
 }
 
 
 //case of expression 
 
 //addFour() //this will give error while above nrml declaration will not 
+
+// console.log(addFour(5)) // its not allowed as function is stored in variable 
 
 let addFour = function( num ){
     return num+4
