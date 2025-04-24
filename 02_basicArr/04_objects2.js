@@ -25,10 +25,10 @@ let obj1={1:'a'}
 let obj2={2:'b'}
 let obj3={3:'c'}
 
-let obj4= Object.assign({}, obj1,obj2, obj3)
+let obj4= Object.assign({}, obj1,obj2, obj3)//first array is empty and all other array get joined and copied their
 
 // console.log(obj4)
 
 //better way is spread operator 
-obj4= {...obj1, ...obj2, ...obj3}
+obj4= {...obj1, ...obj2, ...obj3} //this dot we also used in arr also 
 console.log(obj4)
