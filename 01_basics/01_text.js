@@ -5,4 +5,4 @@ var c=15  //it can not a scope variable so if you declare in one function you ca
 d=20
 
 console.log(a)
-console.table([a, b, c, d])
+// console.table([a, b, c, d])

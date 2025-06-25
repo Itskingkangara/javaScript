@@ -12,16 +12,16 @@ let changeIntoNum=Number(undefined)
 
 console.log(undefined)
 
-console.log(changeIntoNum);
+console.log(changeIntoNum)
 
-let tempNum=0;
-let converter=Boolean(tempNum);
+// let tempNum=0;
+// let converter=Boolean(tempNum);
 
-console.log(converter)
+// console.log(converter)
 
 
-//now we will try to convert in into string 
-let tempNumber =100;
-let tempString =String(tempNumber);
+// //now we will try to convert in into string 
+// let tempNumber =100;
+// let tempString =String(tempNumber);
 
-console.log(typeof (tempString));
+// console.log(typeof (tempString));
