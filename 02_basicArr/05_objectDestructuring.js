@@ -22,4 +22,7 @@ let anotherObj={
 
 let {name : generalName }= anotherObj
 
+generalName = "viruPaji"
+console.log(anotherObj.name)
+
 console.log(generalName)

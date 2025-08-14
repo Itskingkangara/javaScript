@@ -16,7 +16,7 @@ console.log(newArray)
 
 newArray.shift() //removes 1st element of arr 
 
-//although they are not considered as good practice becz the hole arr need to be shift 
+//although they are not considered as good practice becz the hole arr need to be shift increase overhead
 console.log(newArray)
 let joinFunction = newArray.join();
 

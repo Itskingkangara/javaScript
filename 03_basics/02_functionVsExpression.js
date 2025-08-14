@@ -28,13 +28,27 @@ function addThree(num){
 
 //case of expression 
 
-//addFour() //this will give error while above nrml declaration will not 
+// addFour() //this will give error while above nrml declaration will not 
 
-// console.log(addFour(5)) // its not allowed as function is stored in variable 
+console.log(addFour(5)) // its not allowed as function is stored in variable 
 
 let addFour = function( num ){
     return num+4
 }
 
+
+console.log(addFive(5))
+
+//first wy
+
+function addFive(num1){
+    return num1+5
+}
+
+//second way 
+
+let store= function addFive(num1 ){
+    return num1+5; 
+}
 
 

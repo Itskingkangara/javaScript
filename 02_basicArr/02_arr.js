@@ -11,12 +11,13 @@ const mergeArr = arr1.concat(arr2)
 
 //if we want to merge more than 2 arr than it work like this
 
-// console.log(...arr1, ...arr2, ...mergeArr)
+// console.log(...arr1, ...arr2, ...mergeArr) // concatination 
 
 let nestedArr= [1,2,3,['a','b','c',['ab','bc','ca']],5]
 
-let unNested=nestedArr.flat(2) //flat use when arr of arrays given 
-//console.log(unNested)        //2 represent which level of unnesting required 
+let unNested=nestedArr.flat(2) //flat use when nested array given 
+// console.log(unNested)        //2 represent which level of unnesting required 
+
 
 
 // *******************************************
@@ -30,7 +31,8 @@ console.log(Array.isArray(arr))
 const name="Harshit"
 console.log(Array.from(name)) //converts any data type into Array and if not possible then return empty Array
 
-// //exceptional case
+
+//exceptional case
 console.log(Array.from({name: "Harshit"})) //it returns empty array
 
 console.log(Array.of(1,2,3,4,5,6,'a','b'))
