@@ -1,13 +1,13 @@
-let user ={
-    name: " Harshit Gupta ", 
-    price : 18999,
+// let user ={
+//     name: " Harshit Gupta ", 
+//     price : 18999,
 
-    welcomeMessage : function(){
-        console.log(`welcome ${this.name} in your TECH world `)//to use variable of object you need to use " this " keyword
+//     welcomeMessage : function(){
+//         console.log(`welcome ${this.name} in your TECH world `)//to use variable of object you need to use " this " keyword
         
-        console.log(this)
-    }
-}
+//         console.log(this)
+//     }
+// }
 
 // user. welcomeMessage() //without changing 
 
@@ -19,16 +19,16 @@ let user ={
 
 // *******************Arrow Function***************************//
 
-//using "this" in function 
+// using "this" in function 
 
-function fun(){
-    let userName= " Harshit Gupta"
-    console.log(this.userName) // output of this is undefined as it is allowwed in objects only and this is functions
-}
+// function fun(){
+//     let userName= " Harshit Gupta"
+//     console.log(this.userName) // output of this is undefined as it is allowwed in objects only and this is functions
+// }
 
 // fun() 
 
-//lets initiate arrow functions 
+//******lets initiate arrow functions ***
 
 const fun1= () =>{
     let username = " Harshit Gupta "
@@ -55,8 +55,8 @@ let add3 = (num1, num2) =>
 console.log(`${add1(2,1)}--num1 , ${add2(3,2)}---num2, ${add3(4,3)}---num3`)
 
 
-let mul = (num1, num2)=>{
-    return num1*num2
-}
+// let mul = (num1, num2)=>{
+//     return num1*num2
+// }
 
-console.log(mul(2,4))
+// console.log(mul(2,4))

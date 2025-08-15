@@ -32,5 +32,5 @@
 
 //lets try IIFE
 (function callItself(name){
-    console.log(` its a iife : imediatelly invoked function expression created by ` )
+    console.log(` its a iife : imediatelly invoked function expression created by ${name}` )
 })(" harshit ");
