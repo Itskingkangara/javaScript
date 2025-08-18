@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM : Chai Aur Code </title>
+</head>
+<body>
+        <div class="parent">
+            <div class="day">mon</div>
+            <div class="day">tues</div>
+            <div class="day">wed</div>
+            <div class="day">thus</div>
+            <div class="day">fri</div>
+            <div class="day">sat</div>
+            <div class="day">sun</div>
+        </div>
+</body>
+<script>
+
+    const parent= document.querySelector('.parent')
+    // console.log(parent)
+    // console.log(parent.children)
+    // console.log(parent.children[0].innerHTML)
+
+    for(let i=0 ; i<parent.children.length ; i++){
+        // console.log(parent.children[i].innerHTML)
+    }
+
+    //first element child is use to find first child of parent 
+    // console.log(parent.firstElementChild.innerHTML)
+    // console.log(parent.lastElementChild) //this will select whole div for that particular child 
+    // console.log(parent.lastElementChild.innerHTML)// help to get value under childeren div
+
+    let dayOne = parent.children[0]
+
+    console.log(dayOne.parentElement)//dirrect assec to parent element possible using this only 
+    console.log(dayOne.nextElementSibling.innerHTML)
+
+</script>
+</html>

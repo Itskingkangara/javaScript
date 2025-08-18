@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+    <ul class= "unList">
+        <li>javaScript</li>
+    </ul>
+    
+</body>
+
+<script>
+
+    //to add one simple task we need to perform the same multiple task and that can be done using function 
+
+    function addText(value){
+        //create element
+        const text= document.createElement('li')
+
+        //add text to that element 
+        text.innerHTML = `${value}`
+
+        //elemnt need to attach to respectivve position
+
+        document.querySelector('.unList').appendChild(text)
+    }
+
+    function addTextOptimally(value){
+        //create node
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${value}`))
+
+        //connect node to your desired spot 
+        document.querySelector('.unList').appendChild(li)
+    }
+
+    addText('phython')
+    addText('C++')
+
+    addTextOptimally('anotherLang') //its better approch as we don't need to traverse whole tree but putting value directlly in the functions 
+
+    // *********************************************
+    // now we try to replace value that already exist 
+
+    //select where you want to replace 
+    let li =document.querySelector('li:nth-child(2)')
+
+    // li.innerHTML="ruby" //its a debateble that this is not that ooptimized 
+
+    let newLang= document.createElement('li')
+
+    newLang.textContent="allRuby"
+
+    //now we replace it with reqired
+    li.replaceWith(newLang)
+
+
+    //another way to edit 
+    const selectLan= document.querySelector('.unList').firstElementChild
+    
+    selectLan.outerHTML= '<li> lappu </li>'
+
+    //remove element 
+    selectLan.remove()
+
+
+</script>
+</html>
