@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" <!--onclick="alert('OWL')"--> ></li>
+
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+    //our motive is to delete images on click 
+
+    //1st Methord -- directlly apply on click in html file as shown at owl //not considered as good practice becz it cause drastic problem while scaling 
+
+    //2nd 
+    //using javaScript code 
+    // document.getElementById('owl').onclick= ()=>{
+    //     alert('ohh AGAIN OWLLLL')
+    // } //this methord provides less functionality
+    
+    //3rd 
+    //using event 
+    // document.getElementById('owl').addEventListener('click', ()=>{
+    //     alert(' fuckkkk OWL AGAIN ')
+    // })
+
+    //2 more metords are present but now a days they are not get used 
+    //attachEvent() //used in really  earlier days
+    //on -- used in jQuery on of famous language exited 
+
+ 
+    // document.getElementById('owl').addEventListener('click', ()=>{
+    //     alert(' fuckkkk OWL AGAIN ')
+    // }, false ) //event have 3 attribute , the last one is set false by default 
+    
+    //  event important for interveiw perpective :
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //3rd attribute represent event propogation 
+
+//    event propogation carry 2 concepts 
+//     -- bubbling :
+
+        // document.getElementById('images').addEventListener('click', ()=>{
+        //     console.log('You Click on Image')
+        // }, false )
+
+        // document.getElementById('owl').addEventListener('click' , ()=>{
+        //     console.log('You pressed an Owl ')
+        // }, false )
+
+        //when eventListner is set on false then it execute inner to outer means first it execute inner element then outer one , in this particular case owl in inside the image tag so owl one execute first
+
+        // --capturing 
+
+        // top to bottom when set true 
+
+        // document.getElementById('images').addEventListener('click', ()=>{
+        //     console.log('You Click on Image')
+        // }, true )
+
+        // document.getElementById('owl').addEventListener('click' , ()=>{
+        //     console.log('You pressed an Owl ')
+        // }, true )
+
+
+
+//to stop bubbling , means we want to track the inner particular event 
+         document.getElementById('images').addEventListener('click', ()=>{
+            console.log('You Click on Image')
+        }, false )
+
+        //set false for bubbling 
+
+        document.getElementById('owl').addEventListener('click' , (e)=>{
+            console.log('You pressed an Owl ')
+            e.stopPropagation() //this get executed than it does not trigger any other further events 
+
+        }, false )
+
+</script>

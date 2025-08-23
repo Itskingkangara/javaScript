@@ -1,0 +1,65 @@
+//some common examples of api 
+
+//api.github.com/users/youruserID
+//randomuser.me
+
+//api generally get in big objects forms and its really hard to get data through it 
+
+//to understand better there is some app that structure the api in easy to understand structure 
+
+//jsonformattor{it is a site } is one of the good examples to see api in much better strcture form specially in tree form
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+
+    //AJAX programming : api javaScript xml programming was used for asyncronus programming
+
+    //*** Below are different phase of request earlier it was declared by no as given  ***
+
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+    
+</body>
+
+<script>
+    const xml= new XMLHttpRequest()// new used here to create fresh object , as this request is class
+    const requestUrl='https://randomuser.me/api/'
+
+    xml.open('GET', requestUrl) //1st attribute show type of url and second show second the link of api 
+
+    // console.log(xml.readyState) //this show current status of request
+    
+    //below methord allow us to track the status of ap request as it change after eny update 
+
+    xml.onreadystatechange= function (){
+        console.log(xml.readyState)
+
+        if(xml.readyState===4){
+
+            const letFetchData= JSON.parse(this.responseText)
+
+            //this below will not work as most of the time the data type is string 
+            console.log(typeof letFetchData)
+            console.log(letFetchData.results[0].name.first) //by understanding structure we need to do this to reach our target 
+        }
+    }
+
+    //open need to be called , means open methord does not called itself 
+    xml.send()
+
+    //lets fetch actual data from api 
+
+
+    
+
+</script>
+</html>

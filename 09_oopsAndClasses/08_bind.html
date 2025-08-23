@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button> CLICK ME </button>
+</body>
+
+<script>
+    class react{
+
+        constructor(){
+            this.lib = "REACT"
+            this.server = "http: // 3000.host"
+
+            document.
+                querySelector('button').
+                addEventListener('click', this.handleClick.bind(this)) //use of bind to actually find all the other Details 
+        }
+
+        handleClick= function(){
+            console.log(this) //by this we know "this" has only refrencce for button only and to bind all the information bind keyWord is used 
+            console.log(this.lib)
+            console.log(this.server)
+        }
+    }
+
+    const newUser = new react()
+</script>
+</html>

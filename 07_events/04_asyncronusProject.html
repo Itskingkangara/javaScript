@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="heading"> Set Time Out </h2>
+    <button id="stop">STOP</button>
+</body>
+
+<script>
+    const text= document.getElementById('heading')
+
+    const firstOne = setTimeout(()=>{
+        text.innerHTML= "I am handler and I changed I chnaged it "
+    },5000) //it take handler (a function without name ) and time (in miliseconds )as arguments and its not a part of javaScript itself its a methord provided by browser 
+
+    // another way to excute this 
+    const tempFun = function(){
+        text.innerHTML = "by reference Its Handler"
+    }
+
+    const secondOne=setTimeout(tempFun, 3000)
+
+    //if we want to stop the action by some event like pressing button or something else than we have methord 
+
+    clearTimeout(firstOne)//refrence of setTimeout require... it stops secondOne 
+
+    //clearTimeout make sense with event only 
+
+    const button = document.querySelector('#stop')
+    button.addEventListener('click', ()=>{
+        clearTimeout(firstOne)
+        clearTimeout(secondOne)
+
+        //if we pressed a stop button before excution than it setTimeOut will not work 
+    })
+</script>
+</html>

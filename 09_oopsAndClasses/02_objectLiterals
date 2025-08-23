@@ -1,0 +1,46 @@
+//object literal are literally objects , 
+//eg
+let obj = {}// this is object
+
+//this 
+let thisObj= {
+    name:"anything", 
+    lastName:"anything",
+    fun : function(){
+        // console.log(`${name}`)// in this case function don't know the context from where this name came from 
+        console.log(`${this.name}`) //this help to identify that we are talking aout this context only
+    }   
+}
+
+//this used in global enviroment gives empty object but if run in browser enviroment it give context of browser that is window
+console.log(this)
+
+// ******************************
+//new KeyWord , construction function 
+
+// new is use to create seprate instance
+
+// eg
+const date = new Date// you have seprate instance for Date 
+
+function structure(userName , rollNo){
+    this.userName = userName
+    this.rollNo = rollNo 
+
+    return this //this return current context 
+    //reutrning this is not necassary 
+}
+
+const user1= new structure('harshit', '125')
+const user2= new structure('rohit', '123') //with help of new we avoid overwrite on one funciton to other 
+
+console.log(user1)
+console.log(user2)
+
+// step involve with new keyWord
+step 1: creation of empty Object
+step 2:  contrction function get called
+step 3: function and defination get injected 
+step 4: return value
+
+
